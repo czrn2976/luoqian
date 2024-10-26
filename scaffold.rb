@@ -25,10 +25,8 @@ if Dir.exist?(destination_dir)
             puts "Deleted: #{file_path}"
         end
     end
-    puts "All files have been removed from #{destination_dir}."
 else
     FileUtils.mkdir_p(destination_dir)
-    puts "Directory #{destination_dir} does not exist."
 end
 
 # Copy all files and directories while preserving the structure

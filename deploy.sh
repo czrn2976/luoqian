@@ -23,7 +23,12 @@ build() {
 
 setup_gh() {
   # Delete the branch if it exists, and create a new one
-  git branch -D "$PAGES_BRANCH"
+  if git show-ref --verify --quiet "refs/heads/$PAGES_BRANCH"; then
+    echo "Branch '$PAGES_BRANCH' exists. Deleting it..."
+    git branch -D "$PAGES_BRANCH"  # Delete the local branch
+  else
+    echo "Branch '$PAGES_BRANCH' does not exist locally. Skipping deletion."
+  fi
 
   # Create and switch to the new branch
   git checkout -b "$PAGES_BRANCH"

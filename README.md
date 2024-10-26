@@ -6,6 +6,8 @@
 
   A fully customized, open-source LinkTree alternative deployed directly on GitHub Pages.
 
+  [![Automatic build](https://github.com/ZhgChgLi/linkyee/actions/workflows/build.yml/badge.svg)](https://github.com/ZhgChgLi/linkyee/actions/workflows/build.yml) [![pages-build-deployment](https://github.com/ZhgChgLi/linkyee/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/ZhgChgLi/linkyee/actions/workflows/pages/pages-build-deployment)
+
   [**Live Demo**→](https://zhgchg.li/linkyee/)
 
   ![linkyee](https://github.com/user-attachments/assets/66e01d38-36bf-4cfc-8461-968947f5712c)

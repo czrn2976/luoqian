@@ -7,7 +7,6 @@ GEM
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     racc (1.8.1)
-    rake (13.2.1)
     yaml (0.3.0)
 
 PLATFORMS
@@ -16,7 +15,6 @@ PLATFORMS
 DEPENDENCIES
   liquid (~> 5.5)
   nokogiri (~> 1.15)
-  rake (~> 13.2)
   yaml (~> 0.3)
 
 BUNDLED WITH

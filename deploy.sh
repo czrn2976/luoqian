@@ -23,10 +23,7 @@ build() {
 
 setup_gh() {
   # Delete the branch if it exists, and create a new one
-  if git branch --list "$PAGES_BRANCH" > /dev/null; then
-    echo "Branch '$PAGES_BRANCH' exists. Deleting and recreating it..."
-    git branch -D "$PAGES_BRANCH"
-  fi
+  git branch -D "$PAGES_BRANCH"
 
   # Create and switch to the new branch
   git checkout -b "$PAGES_BRANCH"

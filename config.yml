@@ -1,0 +1,79 @@
+# The Site Configuration
+theme: default
+lang: "en"
+plugins:
+  - MediumFollowersCountPlugin:
+      username: zhgchgli
+#
+
+title: "ZhgChgLi's Links"
+
+avatar: "./images/profile.jpeg"
+
+name: "@zhgchgli"
+tagline:  >-
+    An iOS, web, and automation developer from Taiwan 🇹🇼 who also loves sharing, traveling, and writing.
+
+links:
+  - link:
+      icon: "fa-brands fa-medium"
+      title: "Tech Blog <span class='link-button-text'>({{vars.MediumFollowersCountPlugin}} Followers)</span>"
+      url: "https://blog.zhgchg.li"
+      alt: "ZhgChgLi's Tech Blog"
+      target: "_blank"
+  - link:
+      icon: "fa-brands fa-medium"
+      title: "Travelog <span class='link-button-text'>({{vars.MediumFollowersCountPlugin}} Followers)</span>"
+      url: "https://medium.com/ztravel"
+      alt: "ZhgChgLi's Travelog"
+      target: "_blank"
+  - link:
+      icon: "fa-solid fa-rss"
+      title: "Website"
+      url: "https://zhgchg.li/"
+      alt: "ZhgChgLi's Website"
+      target: "_blank"
+  - link:
+      icon: "fa-brands fa-instagram"
+      title: "Instgaram"
+      url: "https://www.instagram.com/zhgchgli/"
+      alt: "ZhgChgLi's Instgaram"
+      target: "_blank"
+
+socials:
+  - social:
+      icon: "fa-brands fa-medium"
+      url: "https://blog.zhgchg.li"
+      title: "ZhgChgLi's Medium"
+      alt: "ZhgChgLi's Medium"
+      target: "_blank"
+  - social:
+      icon: "fa-brands fa-github"
+      url: "https://github.com/ZhgChgLi"
+      title: "ZhgChgLi's Github"
+      alt: "ZhgChgLi's Github"
+      target: "_blank"
+  - social:
+      icon: "fa-brands fa-twitter"
+      url: "https://twitter.com/zhgchgli"
+      title: "ZhgChgLi's Twitter"
+      alt: "ZhgChgLi's Twitter"
+      target: "_blank"
+  - social:
+      icon: "fa-brands fa-linkedin"
+      url: "https://www.linkedin.com/in/zhgchgli/"
+      title: "ZhgChgLi's LinkedIn"
+      alt: "ZhgChgLi's LinkedIn"
+      target: "_blank"
+  - social:
+      icon: "fa-solid fa-envelope"
+      url: "mailto:zhgchgli@gmail.com"
+      title: "zhgchgli@gmail.com"
+      alt: "zhgchgli@gmail.com"
+      target: "_blank"
+
+footer: >
+    Welcome <a href="https://google.com">to</a> visit my website, follow me on Medium or GitHub, or stay in touch on Instagram or LinkedIn.
+    
+copyright: >
+  © 2024 ZhgChgLi. Powered by <a href="https://github.com/ZhgChgLi/linkyee" target="_blank">linkyee</a>

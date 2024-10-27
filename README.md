@@ -18,7 +18,7 @@
 
 - [Features](https://github.com/ZhgChgLi/linkyee/edit/main/README.md#features)
 - [Get Started – Deploy on GitHub Pages](https://github.com/ZhgChgLi/linkyee/edit/main/README.md#get-started--deploy-on-github-pages)
-- [Configuration & Customized](https://github.com/ZhgChgLi/linkyee/edit/main/README.md#configuration)
+- [Configuration & Customized & Automatic Redeployment](https://github.com/ZhgChgLi/linkyee/edit/main/README.md#configuration)
 - [Custom Domain](https://en.zhgchg.li/posts/483af5d93297/)
 
 ## Features
@@ -207,6 +207,15 @@ Refresh the page for the changes to take effect. 🚀
 2. Update `theme:YOUR_THEME` in `config.yml` file
 
 > Yes, you can use GenAI tools like ChatGPT to help you create your own custom link pages!
+
+#### Automatic Redeployment
+
+By default, the project redeploys automatically once a day to refresh the values of plugin's dynamic variables. You can adjust the [cron](https://crontab.guru/#0_0_*_*_*) settings in [build.yml](../../actions/workflows/build.yml):
+```
+schedule:
+    - cron: '0 0 * * *'  # Runs daily at midnight (00:00 UTC)
+```
+If you don’t need scheduled redeployment, simply delete the schedule block.
 
 ## Custom Domain ❤️❤️❤️
 

@@ -58,8 +58,8 @@ deploy() {
 
 main() {
   init     # Initialize and validate environment
-  setup_gh # Set up the gh-pages branch
   build    # Build the site
+  setup_gh # Set up the gh-pages branch
   flush
   deploy   # Deploy the site
 }

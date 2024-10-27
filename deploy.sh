@@ -31,7 +31,7 @@ flush() {
 
   for item in ./* .[^.]*; do
     # skip ./_output and CNAME
-    if [[ "$item" != "./_output" && "$item" != "./CNAME" ]]; then
+    if [[ "$item" != "./_output" && "$item" != "./.git" && "$item" != "./.github" && "$item" != "./CNAME" ]]; then
       rm -rf "$item"
     fi
   done

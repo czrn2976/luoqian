@@ -27,12 +27,16 @@ setup_gh() {
 }
 
 flush() {
-  shopt -s extglob
+  shopt -s dotglob nullglob 
 
-  rm -rf !(CNAME|_output)
-  rm -rf .[^.] .??* !(CNAME|_output)
+  for item in ./* .[^.]*; do
+    # skip ./_output and CNAME
+    if [[ "$item" != "./_output" && "$item" != "./CNAME" ]]; then
+      rm -rf "$item"
+    fi
+  done
 
-  shopt -u extglob
+  shopt -u dotglob nullglob 
 
   # Move all generated files to the root directory
   mv ./_output/* ./

@@ -105,6 +105,9 @@ plugins:
 # Google Analytics tracking id
 google_analytics_id:
 
+# Google Analytics tracking id
+google_analytics_id:
+
 # HTML Title
 title: "ZhgChgLi's Links"
 

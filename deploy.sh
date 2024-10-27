@@ -5,6 +5,11 @@ set -eu  # Exit on error or unset variable
 
 PAGES_BRANCH="gh-pages"
 
+SITE_DIR="_output"
+
+_backup_dir="$(mktemp -d)"
+
+
 init() {
   # Check if the script is running in a GitHub Actions environment
   if [[ -z ${GITHUB_ACTION+x} ]]; then
@@ -14,6 +19,11 @@ init() {
 }
 
 build() {
+  # clean
+  if [[ -d $SITE_DIR ]]; then
+    rm -rf "$SITE_DIR"
+  fi
+
   # Run the Ruby script to generate the output
   bundle exec ruby "./scaffold.rb"
 }
@@ -26,20 +36,22 @@ setup_gh() {
   fi
 }
 
+backup() {
+  mv "$SITE_DIR"/* "$_backup_dir"
+  mv .git "$_backup_dir"
+
+  if [[ -f CNAME ]]; then
+    mv CNAME "$_backup_dir"
+  fi
+}
+
 flush() {
-  shopt -s dotglob nullglob 
+  rm -rf ./*
+  rm -rf .[^.] .??*
 
-  for item in ./* .[^.]*; do
-    # skip ./_output and CNAME
-    if [[ "$item" != "./_output" && "$item" != "./.git" && "$item" != "./.github" && "$item" != "./CNAME" ]]; then
-      rm -rf "$item"
-    fi
-  done
+  shopt -s dotglob nullglob
 
-  shopt -u dotglob nullglob 
-
-  # Move all generated files to the root directory
-  mv ./_output/* ./
+  mv "$_backup_dir"/* .
 }
 
 deploy() {
@@ -57,11 +69,12 @@ deploy() {
 }
 
 main() {
-  init     # Initialize and validate environment
-  build    # Build the site
-  setup_gh # Set up the gh-pages branch
+  init
+  Build
+  setup_gh
+  backup
   flush
-  deploy   # Deploy the site
+  deploy
 }
 
 # Execute the main function

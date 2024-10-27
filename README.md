@@ -95,6 +95,9 @@ plugins:
   - MediumFollowersCountPlugin:
       username: zhgchgli
 
+# Google Analytics tracking id
+google_analytics_id:
+
 # HTML Title
 title: "ZhgChgLi's Links"
 
@@ -185,7 +188,7 @@ footer: >
 # Footer copyright message
 # Linkyee is a 100% free, open-source project—feel free to modify the copyright message as you like. :)
 copyright: >
-  © 2024 ZhgChgLi. Powered by <a href="https://github.com/ZhgChgLi/linkyee" target="_blank">linkyee</a>
+  © 2024  <a href="https://zhgchg.li" target="_blank">ZhgChgLi</a>. Powered by <a href="https://github.com/ZhgChgLi/linkyee" target="_blank">linkyee</a>
 ```
 
 #### Please note that after each files modification, you need to wait for GitHub Actions to complete the `Automatic build` and `pages build and deployment` tasks.

@@ -16,22 +16,26 @@ init() {
 build() {
   # Run the Ruby script to generate the output
   bundle exec ruby "./scaffold.rb"
-
-  # Move all generated files to the root directory
-  mv ./_output/* ./
 }
 
 setup_gh() {
-  # Delete the branch if it exists, and create a new one
   if git show-ref --verify --quiet "refs/heads/$PAGES_BRANCH"; then
-    echo "Branch '$PAGES_BRANCH' exists. Deleting it..."
-    git branch -D "$PAGES_BRANCH"  # Delete the local branch
+    git checkout -b "$PAGES_BRANCH"
   else
-    echo "Branch '$PAGES_BRANCH' does not exist locally. Skipping deletion."
+    git checkout "$PAGES_BRANCH"
   fi
+}
 
-  # Create and switch to the new branch
-  git checkout -b "$PAGES_BRANCH"
+flush() {
+  shopt -s extglob
+
+  rm -rf !(CNAME|_output)
+  rm -rf .[^.] .??* !(CNAME|_output)
+
+  shopt -u extglob
+
+  # Move all generated files to the root directory
+  mv ./_output/* ./
 }
 
 deploy() {
@@ -52,6 +56,7 @@ main() {
   init     # Initialize and validate environment
   build    # Build the site
   setup_gh # Set up the gh-pages branch
+  flush
   deploy   # Deploy the site
 }
 

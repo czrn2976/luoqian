@@ -26,8 +26,6 @@ build() {
 
   # Run the Ruby script to generate the output
   bundle exec ruby "./scaffold.rb"
-
-  git checkout -- "_output/*"
 }
 
 setup_gh() {
@@ -72,8 +70,8 @@ deploy() {
 
 main() {
   init
-  build
   setup_gh
+  build
   backup
   flush
   deploy

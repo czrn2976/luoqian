@@ -17,7 +17,7 @@ destination_dir = "./_output/"
 # Clean _output folder
 if Dir.exist?(destination_dir)
     Dir.foreach(destination_dir) do |file|
-        next if file == '.' || file == '..'
+        next if file == '.' || file == '..' || file == 'AUTO_GEN_FOLDER_DO_NOT_EDIT_FILE_HERE'
         file_path = File.join(destination_dir, file)
 
         if File.file?(file_path)

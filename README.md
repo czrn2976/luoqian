@@ -90,10 +90,20 @@ lang: "en"
 # Plugins, implemented in ./plugins/PLUGIN_NAME
 # Use {{ vars.PLUGIN_NAME }} in the settings below
 
+# The output of the plugin can be used below, e.g., {{vars.MediumFollowersCountPlugin}}
 plugins:
   # Automatically fetch Medium follower count
   - MediumFollowersCountPlugin:
       username: zhgchgli
+  # Automatically fetch Github repo star count
+  - GithubRepoStarsCountPlugin:
+      - ZhgChgLi/ZMarkupParser
+      - ZhgChgLi/ZReviewTender
+      - ZhgChgLi/ZMediumToMarkdown
+      - ZhgChgLi/linkyee
+
+# Google Analytics tracking id
+google_analytics_id:
 
 # HTML Title
 title: "ZhgChgLi's Links"
@@ -110,39 +120,66 @@ tagline: >-
 
 # List of links
 # icon: Use Font Awesome icons (https://fontawesome.com/search?o=r&m=free)
-# title: The displayed text for the link
+# text: The displayed text for the link
+# title: The url title
 # url: The URL of the link
 # alt: Alternative text for accessibility
 # target: `_blank` opens in a new tab, `_self` opens in the same frame
 links:
   - link:
       icon: "fa-brands fa-medium"
-      title: "Tech Blog <span class='link-button-text'>({{vars.MediumFollowersCountPlugin}} Followers)</span>"
+      text: "Tech Blog <span class='link-button-text'>({{vars.MediumFollowersCountPlugin}} Followers)</span>"
       url: "https://blog.zhgchg.li"
       alt: "ZhgChgLi's Tech Blog"
+      title: "ZhgChgLi's Tech Blog"
       target: "_blank"
   - link:
       icon: "fa-brands fa-medium"
-      title: "Travelog <span class='link-button-text'>({{vars.MediumFollowersCountPlugin}} Followers)</span>"
+      text: "Travelog <span class='link-button-text'>({{vars.MediumFollowersCountPlugin}} Followers)</span>"
       url: "https://medium.com/ztravel"
       alt: "ZhgChgLi's Travelog"
+      title: "ZhgChgLi's Travelog"
       target: "_blank"
   - link:
       icon: "fa-solid fa-rss"
-      title: "Website"
+      text: "Website"
       url: "https://zhgchg.li/"
       alt: "ZhgChgLi's Website"
+      title: "ZhgChgLi's Website"
       target: "_blank"
   - link:
-      icon: "fa-brands fa-instagram"
-      title: "Instagram"
-      url: "https://www.instagram.com/zhgchgli/"
-      alt: "ZhgChgLi's Instagram"
+      icon: "fa-brands fa-swift"
+      text: "ZMarkupParser <span class='link-button-text'>({{vars.GithubRepoStarsCountPlugin['ZhgChgLi/ZMarkupParser']}} Stars)</span>"
+      url: "https://github.com/ZhgChgLi/ZMarkupParser"
+      alt: "ZMarkupParser is a pure-Swift library that helps you to convert HTML strings to NSAttributedString with customized style and tags."
+      title: "ZMarkupParser is a pure-Swift library that helps you to convert HTML strings to NSAttributedString with customized style and tags."
       target: "_blank"
+  - link:
+      icon: "fa-brands fa-app-store-ios"
+      text: "ZReviewTender <span class='link-button-text'>({{vars.GithubRepoStarsCountPlugin['ZhgChgLi/ZReviewTender']}} Stars)</span>"
+      url: "https://github.com/ZhgChgLi/ZReviewTender"
+      alt: "ZReviewTender is a tool for fetching app reviews from the App Store and Google Play Console and integrating them into your workflow."
+      title: "ZReviewTender is a tool for fetching app reviews from the App Store and Google Play Console and integrating them into your workflow."
+      target: "_blank"
+  - link:
+      icon: "fa-brands fa-markdown"
+      text: "ZMediumToMarkdown <span class='link-button-text'>({{vars.GithubRepoStarsCountPlugin['ZhgChgLi/ZMediumToMarkdown']}} Stars)</span>"
+      url: "https://github.com/ZhgChgLi/ZMediumToMarkdown"
+      alt: "ZMediumToMarkdown is a powerful tool that allows you to effortlessly download and convert your Medium posts to Markdown format."
+      title: "ZMediumToMarkdown is a powerful tool that allows you to effortlessly download and convert your Medium posts to Markdown format."
+      target: "_blank"
+  - link:
+      icon: "fa-brands fa-github"
+      text: "linkyee <span class='link-button-text'>({{vars.GithubRepoStarsCountPlugin['ZhgChgLi/linkyee']}} Stars)</span>"
+      url: "https://github.com/ZhgChgLi/linkyee"
+      alt: "linkyee is a fully customized, open-source LinkTree alternative deployed directly on GitHub Pages."
+      title: "linkyee is a fully customized, open-source LinkTree alternative deployed directly on GitHub Pages."
+      target: "_blank"
+
 
 # List of social media links
 # icon: Use Font Awesome icons (https://fontawesome.com/search?o=r&m=free)
-# title: The displayed title for the social media link
+# title: The url title
 # url: The URL of the social media link
 # alt: Alternative text for accessibility
 # target: _blank opens in a new tab, _self opens in the same frame
@@ -172,6 +209,12 @@ socials:
       alt: "ZhgChgLi's LinkedIn"
       target: "_blank"
   - social:
+      icon: "fa-brands fa-instagram"
+      url: "https://www.instagram.com/zhgchgli/"
+      title: "Instagram"
+      alt: "ZhgChgLi's Instagram"
+      target: "_blank"
+  - social:
       icon: "fa-solid fa-envelope"
       url: "mailto:zhgchgli@gmail.com"
       title: "Email: zhgchgli@gmail.com"
@@ -185,7 +228,7 @@ footer: >
 # Footer copyright message
 # Linkyee is a 100% free, open-source project—feel free to modify the copyright message as you like. :)
 copyright: >
-  © 2024 ZhgChgLi. Powered by <a href="https://github.com/ZhgChgLi/linkyee" target="_blank">linkyee</a>
+  © 2024  <a href="https://zhgchg.li" target="_blank">ZhgChgLi</a>. Powered by <a href="https://github.com/ZhgChgLi/linkyee" target="_blank">linkyee</a>
 ```
 
 #### Please note that after each files modification, you need to wait for GitHub Actions to complete the `Automatic build` and `pages build and deployment` tasks.

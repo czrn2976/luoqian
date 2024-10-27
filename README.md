@@ -12,7 +12,7 @@
 
   [**Live Demo**→](https://zhgchg.li/linkyee/)
 
-  ![linkyee](https://github.com/user-attachments/assets/66e01d38-36bf-4cfc-8461-968947f5712c)
+  ![linkyee](https://github.com/user-attachments/assets/f6a1ac98-0f0f-485f-ae2a-9abb57a114d3)
 
 </div>
 

@@ -19,7 +19,7 @@ build() {
 }
 
 setup_gh() {
-  if git show-ref --verify --quiet "refs/heads/$PAGES_BRANCH"; then
+  if [[ -z $(git branch -av | grep "$PAGES_BRANCH") ]]; then
     git checkout -b "$PAGES_BRANCH"
   else
     git checkout "$PAGES_BRANCH"

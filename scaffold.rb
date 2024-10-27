@@ -22,7 +22,6 @@ if Dir.exist?(destination_dir)
 
         if File.file?(file_path)
             FileUtils.rm(file_path)
-            puts "Deleted: #{file_path}"
         end
     end
 else

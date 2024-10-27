@@ -70,8 +70,8 @@ deploy() {
 
 main() {
   init
-  setup_gh
   build
+  setup_gh
   backup
   flush
   deploy

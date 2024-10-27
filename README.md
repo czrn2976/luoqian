@@ -6,6 +6,8 @@
 
   A fully customized, open-source LinkTree alternative deployed directly on GitHub Pages.
 
+  Inspired by Jekyllrb and LinkTree.
+
   [![Automatic build](../../actions/workflows/build.yml/badge.svg)](../../actions/workflows/build.yml) [![pages-build-deployment](../../actions/workflows/pages/pages-build-deployment/badge.svg)](../../actions/workflows/pages/pages-build-deployment)
 
   [**Live Demo**→](http://link.zhgchg.li/)

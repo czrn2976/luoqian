@@ -10,7 +10,7 @@
 
   [![Automatic build](../../actions/workflows/build.yml/badge.svg)](../../actions/workflows/build.yml) [![pages-build-deployment](../../actions/workflows/pages/pages-build-deployment/badge.svg)](../../actions/workflows/pages/pages-build-deployment)
 
-  [**Live Demo**→](http://link.zhgchg.li/)
+  [**Live Demo**→](https://zhgchg.li/linkyee/)
 
   ![linkyee](https://github.com/user-attachments/assets/66e01d38-36bf-4cfc-8461-968947f5712c)
 

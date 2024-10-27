@@ -1,19 +1,38 @@
-# The Site Configuration
+# Site Configuration
+
+# Theme, mapped to the directory: ./theme/xxxx
 theme: default
+
+# HTML Language setting
 lang: "en"
+
+# Plugins, implemented in ./plugins/PLUGIN_NAME
+# Use {{ vars.PLUGIN_NAME }} in the settings below
+
 plugins:
+  # Automatically fetch Medium follower count
   - MediumFollowersCountPlugin:
       username: zhgchgli
-#
 
+# HTML Title
 title: "ZhgChgLi's Links"
 
+# Avatar image path
 avatar: "./images/profile.jpeg"
 
+# Name section text
 name: "@zhgchgli"
-tagline:  >-
+
+# Tagline section text
+tagline: >-
     An iOS, web, and automation developer from Taiwan 🇹🇼 who also loves sharing, traveling, and writing.
 
+# List of links
+# icon: Use Font Awesome icons (https://fontawesome.com/search?o=r&m=free)
+# title: The displayed text for the link
+# url: The URL of the link
+# alt: Alternative text for accessibility
+# target: `_blank` opens in a new tab, `_self` opens in the same frame
 links:
   - link:
       icon: "fa-brands fa-medium"
@@ -35,11 +54,17 @@ links:
       target: "_blank"
   - link:
       icon: "fa-brands fa-instagram"
-      title: "Instgaram"
+      title: "Instagram"
       url: "https://www.instagram.com/zhgchgli/"
-      alt: "ZhgChgLi's Instgaram"
+      alt: "ZhgChgLi's Instagram"
       target: "_blank"
 
+# List of social media links
+# icon: Use Font Awesome icons (https://fontawesome.com/search?o=r&m=free)
+# title: The displayed title for the social media link
+# url: The URL of the social media link
+# alt: Alternative text for accessibility
+# target: _blank opens in a new tab, _self opens in the same frame
 socials:
   - social:
       icon: "fa-brands fa-medium"
@@ -50,8 +75,8 @@ socials:
   - social:
       icon: "fa-brands fa-github"
       url: "https://github.com/ZhgChgLi"
-      title: "ZhgChgLi's Github"
-      alt: "ZhgChgLi's Github"
+      title: "ZhgChgLi's GitHub"
+      alt: "ZhgChgLi's GitHub"
       target: "_blank"
   - social:
       icon: "fa-brands fa-twitter"
@@ -68,13 +93,15 @@ socials:
   - social:
       icon: "fa-solid fa-envelope"
       url: "mailto:zhgchgli@gmail.com"
-      title: "zhgchgli@gmail.com"
+      title: "Email: zhgchgli@gmail.com"
       alt: "zhgchgli@gmail.com"
       target: "_blank"
 
+# Footer text
 footer: >
-    Welcome to visit my website, follow me on Medium or GitHub, or stay in touch on Instagram or LinkedIn.
-    
+    Welcome to my website! Follow me on Medium or GitHub, or stay connected on Instagram or LinkedIn.
+
+# Footer copyright message
+# Linkyee is a 100% free, open-source project—feel free to modify the copyright message as you like. :)
 copyright: >
-  © 2024 ZhgChgLi. Powered by <a href="https://github.com/ZhgChgLi/linkyee" target="_blank">linkyee</a>
-# Linkyee is 100% free and an unrestricted open-source project—you can modify the copyright however you like. :)
+  © 2024  <a href="https://zhgchg.li" target="_blank">ZhgChgLi</a>. Powered by <a href="https://github.com/ZhgChgLi/linkyee" target="_blank">linkyee</a>

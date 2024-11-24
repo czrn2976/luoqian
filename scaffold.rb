@@ -86,6 +86,7 @@ settings["title"] = Liquid::Template.parse(settings["title"]).render(settings)
 settings["footer"] = Liquid::Template.parse(settings["footer"]).render(settings)
 settings["tagline"] = Liquid::Template.parse(settings["tagline"]).render(settings)
 settings["name"] = Liquid::Template.parse(settings["name"]).render(settings)
+settings["last_modified_at"] = Time.now.strftime("%Y-%m-%dT%H:%M:%S%z")
 
 # Parse the Liquid template
 liquid_template = Liquid::Template.parse(template_content)
